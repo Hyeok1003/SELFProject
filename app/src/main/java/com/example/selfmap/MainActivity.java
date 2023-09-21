@@ -1,22 +1,15 @@
 package com.example.selfmap;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
-import android.graphics.Color;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
 import android.os.Build;
 import android.os.Build.VERSION;
 import android.os.Bundle;
@@ -27,27 +20,26 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
-import net.daum.mf.map.api.CameraUpdateFactory;
 import net.daum.mf.map.api.MapPoint;
-import net.daum.mf.map.api.MapPointBounds;
-import net.daum.mf.map.api.MapPolyline;
 import net.daum.mf.map.api.MapView;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class MainActivity extends AppCompatActivity implements MapView.CurrentLocationEventListener, MapView.MapViewEventListener {
-
     private DrawerLayout drawerLayout;
     private View drawerView;
 
     private MapView mapView;
     private ViewGroup mapViewContainer;
 
+    private Button btn_announcement, btn_QandA, btn_inquriy;
+    private Intent data;
+
     public MainActivity() {
     }
+    public static final int REQUEST_CODE = 101;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,7 +95,35 @@ public class MainActivity extends AppCompatActivity implements MapView.CurrentLo
 
             }
         };
+        //공지사항 버튼
+        btn_announcement = (Button)findViewById(R.id.btn_announcement);
+        btn_announcement.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(getApplicationContext(), announcement.class);
+                startActivityForResult(intent,REQUEST_CODE);  //intent를 넣어 실행시키게 됩니다.
+            }
+        });
 
+        //Q&A 버튼
+        btn_QandA = (Button)findViewById(R.id.btn_QandA);
+        btn_QandA.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(getApplicationContext(), q_and_a.class);
+                startActivityForResult(intent,REQUEST_CODE);  //intent를 넣어 실행시키게 됩니다.
+            }
+        });
+
+        //문의하기 버튼
+        btn_inquriy = (Button)findViewById(R.id.btn_inquiry);
+        btn_inquriy.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(getApplicationContext(), inquiry.class);
+                startActivityForResult(intent,REQUEST_CODE);  //intent를 넣어 실행시키게 됩니다.
+            }
+        });
 
         mapView = new MapView(this);
         mapViewContainer = (ViewGroup) findViewById(R.id.map_view);
