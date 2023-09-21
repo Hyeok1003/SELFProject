@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements MapView.CurrentLo
     private ViewGroup mapViewContainer;
 
     private Button btn_announcement, btn_QandA, btn_inquriy;
+    private ImageButton btn_call;
     private Intent data;
 
     public MainActivity() {
@@ -121,6 +122,16 @@ public class MainActivity extends AppCompatActivity implements MapView.CurrentLo
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(getApplicationContext(), inquiry.class);
+                startActivityForResult(intent,REQUEST_CODE);  //intent를 넣어 실행시키게 됩니다.
+            }
+        });
+
+        //비상연락망
+        btn_call = (ImageButton)findViewById(R.id.call);
+        btn_call.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(getApplicationContext(), emergency_call.class);
                 startActivityForResult(intent,REQUEST_CODE);  //intent를 넣어 실행시키게 됩니다.
             }
         });
