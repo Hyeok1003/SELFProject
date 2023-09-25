@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements MapView.CurrentLo
     private ViewGroup mapViewContainer;
 
     private Button btn_announcement, btn_QandA, btn_inquriy;
-    private ImageButton btn_call;
+    private ImageButton btn_call, btn_profile_setting;
     private Intent data;
 
     public MainActivity() {
@@ -132,6 +132,16 @@ public class MainActivity extends AppCompatActivity implements MapView.CurrentLo
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(getApplicationContext(), emergency_call.class);
+                startActivityForResult(intent,REQUEST_CODE);  //intent를 넣어 실행시키게 됩니다.
+            }
+        });
+
+        //프로필 설정
+        btn_profile_setting = (ImageButton)findViewById(R.id.btn_profile_setting);
+        btn_profile_setting.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(getApplicationContext(), profile_setting.class);
                 startActivityForResult(intent,REQUEST_CODE);  //intent를 넣어 실행시키게 됩니다.
             }
         });
