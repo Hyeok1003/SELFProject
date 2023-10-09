@@ -32,7 +32,7 @@
             android:name=".inquiry"
             android:exported="false" />
         <activity
-            android:name=".q_and_a"
+            android:name=".bluetooth"
             android:exported="false" />
         <activity
             android:name=".announcement"

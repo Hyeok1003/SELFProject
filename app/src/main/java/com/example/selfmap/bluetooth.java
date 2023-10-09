@@ -7,12 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class q_and_a extends AppCompatActivity {
+public class bluetooth extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_qand);
+        setContentView(R.layout.activity_bluetooth);
         ImageButton ImageButton = findViewById(R.id.backButton);
         ImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
