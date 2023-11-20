@@ -51,150 +51,137 @@
 
     </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/RelativeLayout1"
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="176dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
-        tools:ignore="MissingConstraints">
+        android:layout_marginTop="80dp">
 
-
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:background="#F4F4F4"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="20dp"
-            android:contentDescription="@string/app_name"
-            app:srcCompat="@drawable/profile_icon2xml" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        app:layout_constraintTop_toBottomOf="@+id/RelativeLayout1"
-        >
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="60dp"
+            android:background="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="NotSibling"
+            tools:layout_editor_absoluteY="116dp">
 
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="#FFFFFF"
-                tools:layout_editor_absoluteY="140dp"
-                tools:ignore="NotSibling">
-                
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="100dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="아이디"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/rectangle_2" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:text="아이디"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rectangle_2" />
 
 
-                <EditText
-                    android:id="@+id/editText"
-                    android:layout_width="220dp"
-                    android:layout_height="48dp"
-                    android:layout_centerHorizontal="false"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/signin_edit_text"
-                    android:hint="@string/app_name" />
-            </LinearLayout>
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="220dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="false"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/signin_edit_text"
+                android:hint=" ID" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="NotSibling"
+            tools:layout_editor_absoluteY="176dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:text="비밀번호"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rectangle_2" />
 
 
-            <LinearLayout
-                android:id="@+id/linearLayout2"
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="220dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="false"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/signin_edit_text"
+                android:hint=" PW" />
+        </LinearLayout>
 
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="#FFFFFF"
-                tools:layout_editor_absoluteY="140dp"
-                tools:ignore="NotSibling">
+        <LinearLayout
+            android:id="@+id/linearLayout3"
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="100dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="비밀번호"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/rectangle_2" />
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#FFFFFF"
+            tools:ignore="NotSibling"
+            tools:layout_editor_absoluteY="140dp">
 
-
-                <EditText
-                    android:id="@+id/editText2"
-                    android:layout_width="220dp"
-                    android:layout_height="48dp"
-                    android:layout_centerHorizontal="false"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/signin_edit_text"
-                    android:hint="@string/app_name" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/linearLayout3"
-
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="#FFFFFF"
-                tools:layout_editor_absoluteY="140dp"
-                tools:ignore="NotSibling">
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="120dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="비밀번호 확인"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/rectangle_2" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:text="비밀번호 확인"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rectangle_2" />
 
 
-                <EditText
-                    android:id="@+id/editText3"
-                    android:layout_width="220dp"
-                    android:layout_height="48dp"
-                    android:layout_centerHorizontal="false"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/signin_edit_text"
-                    android:hint="@string/app_name" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/linearLayout4"
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="220dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="false"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/signin_edit_text"
+                android:hint=" 비밀번호 확인" />
+        </LinearLayout>
 
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="#FFFFFF"
-                tools:layout_editor_absoluteY="140dp"
-                tools:ignore="NotSibling">
+        <LinearLayout
+            android:id="@+id/linearLayout4"
 
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="100dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="이름"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/rectangle_2" />
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#FFFFFF"
+            tools:ignore="NotSibling"
+            tools:layout_editor_absoluteY="140dp">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:text="이름"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rectangle_2" />
 
 
                 <EditText
@@ -205,7 +192,7 @@
                     android:layout_marginStart="50dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/signin_edit_text"
-                    android:hint="@string/app_name" />
+                    android:hint=" 이름" />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayout5"
@@ -213,17 +200,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:background="#FFFFFF"
-                tools:layout_editor_absoluteY="140dp"
-                tools:ignore="NotSibling">
+                tools:ignore="NotSibling"
+                tools:layout_editor_absoluteY="140dp">
 
                 <TextView
                     android:id="@+id/textView6"
                     android:layout_width="100dp"
-                    android:layout_marginTop="10dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
                     android:text="전화번호"
                     android:textSize="20sp"
+                    android:textColor="@color/black"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/rectangle_2" />
 
@@ -236,14 +224,10 @@
                     android:layout_marginStart="50dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/signin_edit_text"
-                    android:hint="@string/app_name" />
+                    android:hint=" 전화번호" />
             </LinearLayout>
 
         </LinearLayout>
-    </RelativeLayout>
-
-
-
 
 
 

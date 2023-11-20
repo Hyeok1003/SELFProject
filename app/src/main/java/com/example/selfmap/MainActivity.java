@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity implements MapView.CurrentLo
     private MapView mapView;
     private ViewGroup mapViewContainer;
 
-    private Button btn_announcement, btn_bluetooth, btn_inquriy;
-    private ImageButton btn_call, btn_profile_setting;
+    private Button btn_call, btn_announcement, btn_bluetooth, btn_inquriy;
+    private ImageButton btn_profile_setting;
     private Intent data;
 
     public MainActivity() {
@@ -106,15 +106,15 @@ public class MainActivity extends AppCompatActivity implements MapView.CurrentLo
             }
         });
 
-        //블루투스 버튼
-        btn_bluetooth = (Button) findViewById(R.id.btn_bluetooth);
-        btn_bluetooth.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intent = new Intent(getApplicationContext(), bluetooth.class);
-                startActivityForResult(intent,REQUEST_CODE);  //intent를 넣어 실행시키게 됩니다.
-            }
-        });
+//        //블루투스 버튼
+//        btn_bluetooth = (Button) findViewById(R.id.btn_bluetooth);
+//        btn_bluetooth.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v){
+//                Intent intent = new Intent(getApplicationContext(), bluetooth.class);
+//                startActivityForResult(intent,REQUEST_CODE);  //intent를 넣어 실행시키게 됩니다.
+//            }
+//        });
 
         //문의하기 버튼
         btn_inquriy = (Button)findViewById(R.id.btn_inquiry);
@@ -126,8 +126,8 @@ public class MainActivity extends AppCompatActivity implements MapView.CurrentLo
             }
         });
 
-        //비상연락망
-        btn_call = (ImageButton)findViewById(R.id.call);
+        // 비상연락망
+        btn_call = (Button)findViewById(R.id.btn_call);
         btn_call.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
