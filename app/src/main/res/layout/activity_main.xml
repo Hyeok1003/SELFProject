@@ -8,23 +8,19 @@
     android:layout_height="match_parent"
     tools:ignore="ExtraText">
 
+
+
     <RelativeLayout
-        android:id="@+id/map_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:ignore="UselessParent" >
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        />
 
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background ="#FFFFFF">
         
         <ImageButton
             android:id="@+id/menu_button"
@@ -36,7 +32,15 @@
             android:contentDescription="@string/app_name"
             app:srcCompat="@drawable/menu_barxml" />
     </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="80dp"
+        tools:ignore="UselessParent" >
 
+    </RelativeLayout>
 
     <include layout="@layout/activity_drawer"/>
 </androidx.drawerlayout.widget.DrawerLayout>
